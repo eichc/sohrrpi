@@ -1,0 +1,7 @@
+Week 1 (1/21 - 1/27):
+- Wrote project proposal
+
+Plans for Week 2: 
+- start to learn React.js
+- start Frontend
+- assign more detailed roles for each member

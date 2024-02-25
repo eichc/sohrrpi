@@ -1,0 +1,8 @@
+Week 4 (2/11 - 2/17):
+- experimenting with React components
+- started to create header, footer, and landing page
+
+Plans for week 5:
+- finish header, footer, and landing page
+- create course page
+- determine which other pages need to be created and start those

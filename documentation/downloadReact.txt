@@ -1,0 +1,12 @@
+To learn how to install and use React, you can follow along with this slideshow:
+https://docs.google.com/presentation/d/1vMUbduH_GMaiFpBediymEP0GiLLGt8I4ToB1ZyoCMVQ/edit#slide=id.g2bbd2dd0585_0_1
+
+Or, follow these steps:
+1) Download Node.js https://nodejs.org/en/download
+2) Open a terminal and type npm install -g npm
+3) If you want to create your own app:
+    1. Create a new GitHub repository and open it in VS Code
+    2. Open the terminal in VS Code and type npx create-next-app@latest ./
+4) Or, if you are working on an existing repository, clone it to your computer using GitHub Desktop
+5) To run the app, type npm run dev
+    - if it doesn't work, you may have to install npm again from the VS Code terminal.

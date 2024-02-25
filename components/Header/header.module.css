@@ -1,0 +1,36 @@
+.headcontainer {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    top: 10px;
+    width: auto;
+    position: sticky;
+    backdrop-filter: blur(10px);
+    background-color: var(--navy-opacity);
+    border-radius: 50px;
+}
+
+.headflex{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 0px 1rem;
+    transition: 0.3s;
+    vertical-align: center;
+    padding: 20px;
+    font-size: 20px;
+
+    /* line-height: 100%;
+    height: 100%; */
+}

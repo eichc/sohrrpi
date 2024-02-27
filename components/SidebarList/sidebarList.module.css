@@ -1,0 +1,13 @@
+.sidebarList {
+    margin: none;
+    padding: 10px;
+}
+
+.listitem {
+    display: block;
+    background-color: white;
+    padding: 5px;
+    border: 10px;
+    border-color: black;
+    margin-top: 5px;
+}

@@ -1,10 +1,19 @@
 import styles from "./page.module.css";
 import Header from "@/components/Header/header";
-
+import Footer from "@/components/Footer/footer";
+import Login from "@/pages/Login/login"
 export default function Page() {
   return (
-    <div className={styles.page}>
-      <Header />
-    </div>
+    <div>
+      <div className={styles.page}>
+        <Header />
+      </div>
+      
+      <Login />
+
+      <div className={styles.footer}>
+        <Footer />
+      </div>
+  </div>
   )
 }

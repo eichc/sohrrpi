@@ -8,10 +8,12 @@ export default function Page() {
       <div className={styles.page}>
         <Header />
       </div>
+      
+      <Login />
+
       <div className={styles.footer}>
         <Footer />
       </div>
-      <Login />
   </div>
   )
 }

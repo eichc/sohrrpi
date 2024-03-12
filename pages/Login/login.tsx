@@ -1,18 +1,24 @@
+"use client";
+import React, { useState } from 'react';
 import styles from './login.module.css';
 
 
 const LoginSignup = () => {
+    const [action, setAction] =  useState("Sign Up");
+
+    
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <div className={styles.text}>Sign Up</div>
+                <div className={styles.text}>{action}</div>
                 <div className={styles.underline}></div>
             </div>
             <div className={styles.inputs}>
-            <div className={styles.input}>
+                {action==="Login"?<div></div>:<div className={styles.input}>
                 <img src="" alt="" />
                 <input type = "text" placeholder='Name'/>
-            </div>
+            </div>}
+            
             <div className={styles.input}>
                 <img src="" alt="" />
                 <input type = "email" placeholder='Email' />
@@ -22,10 +28,10 @@ const LoginSignup = () => {
                 <input type = "password" placeholder='Password'/>
             </div>
             </div>
-            <div className={styles.forgotpass}>Lost Password? <span>Click Here!</span></div>
+            {action === "Sign Up"?<div></div>:<div className={styles.forgotpass}>Lost Password? <span>Click Here!</span></div>}
             <div className={styles.submitcontainer}>
-                <div className={styles.submit}>Sign Up</div>   
-                <div className={styles.submit}>Login</div>
+                <div className={action==="Login"?styles.submit_gray:styles.submit} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>   
+                <div className={action==="Sign Up"?styles.submit_gray:styles.submit} onClick={()=>{setAction("Login")}}>Login</div>
             </div>
             </div>
     )

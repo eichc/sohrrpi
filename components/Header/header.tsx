@@ -10,13 +10,12 @@ export default function Header() {
           <a href="../pages/CourseHome/courseHome.tsx" className={styles.head}>
             Courses
           </a>
-          <a href="../pages/Login/login.tsx" className={styles.head}>
-            Login
-          </a>
           <a href="#footer" className={styles.head}>
             About Us
           </a>
-          
+          <a href="../pages/Login/login.tsx" className={styles.head}>
+            Login
+          </a>
         </div>
       </div>
     );

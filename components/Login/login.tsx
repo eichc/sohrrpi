@@ -4,7 +4,7 @@ import styles from './login.module.css';
 
 
 const LoginSignup = () => {
-    const [action, setAction] =  useState("Sign Up");
+    const [action, setAction] =  useState("Login");
 
     
     return (

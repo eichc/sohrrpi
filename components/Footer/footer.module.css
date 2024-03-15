@@ -1,5 +1,5 @@
 .footer {
-    position: fixed;
+    /**position: fixed;*/
     text-align: center;
     background-color: #444444;
     width: 100%;

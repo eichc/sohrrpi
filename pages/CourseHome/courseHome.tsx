@@ -1,40 +1,84 @@
-"use client";
-import React, { useState } from 'react';
-import styles from './courseHome.module.css';
+//currently making the side bar where classes will display. 
+//"Home" will be an empty page with offer to redirect to add courses page
+//when a course is picked, redirect to that course's page (likely be a singular page that will populate based on the picked course via database)
+
+// "use client";
+// import Navbar from "@/components/SideNav/sidenav";
+// import React from "react";
+// import Home from "../../app/page";
+// import Login from "@/pages/Login/login";
 
 
-const LoginSignup = () => {
-    const [action, setAction] =  useState("Sign Up");
+// import { createRoot } from "react-dom/client";
+// import {
+//   createBrowserRouter,
+//   RouterProvider,
+//   Route,
+//   Link,
+//   Outlet,
+//   createRoutesFromElements,
+// } from "react-router-dom";
 
-    
-    return (
-        <div className={styles.container}>
-            <div className={styles.header}>
-                <div className={styles.text}>{action}</div>
-                <div className={styles.underline}></div>
-            </div>
-            <div className={styles.inputs}>
-                {action==="Login"?<div></div>:<div className={styles.input}>
-                <img src="" alt="" />
-                <input type = "text" placeholder='Name'/>
-            </div>}
-            
-            <div className={styles.input}>
-                <img src="" alt="" />
-                <input type = "email" placeholder='Email' />
-            </div>
-            <div className={styles.input}>
-                <img src="" alt="" />
-                <input type = "password" placeholder='Password'/>
-            </div>
-            </div>
-            {action === "Sign Up"?<div></div>:<div className={styles.forgotpass}>Lost Password? <span>Click Here!</span></div>}
-            <div className={styles.submitcontainer}>
-                <div className={action==="Login"?styles.submit_gray:styles.submit} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>   
-                <div className={action==="Sign Up"?styles.submit_gray:styles.submit} onClick={()=>{setAction("Login")}}>Login</div>
-            </div>
-            </div>
-    )
-}
+// const AppLayout = () => (
+//   <>
+//     <Navbar />
+//     <Outlet />
+//   </>
+// );
 
-export default LoginSignup
+// // const router = createBrowserRouter(
+// //   createRoutesFromElements(
+// //     <Route element={<AppLayout />}>
+// //       <Route path="/courseHome" element={<CourseHome />} />
+// //       <Route path="/products" element={<Login />} />
+// //     </Route>
+// //   )
+// // );
+
+// const router = createBrowserRouter([
+//   {
+//     element: <AppLayout />,
+//     children: [
+//       {
+//         path: "/",
+//         element: <Home />,
+//       },
+//       {
+//         path: "/login",
+//         element: <Login />,
+//       },
+//     ],
+//   },
+// ]);
+
+// createRoot(document.getElementById("root")!).render(
+//   <RouterProvider router={router} />
+// );
+
+import React from "react";
+import { BrowserRouter as BrowserRouter, Router, Route, Routes } from "react-router-dom";
+import Sidebar from "@/components/SideNav/sidebar";
+import Home from "./../../app/page";
+import Login from "@/pages/Login/login";
+import Courses from "@/pages/CourseHome/courseHome";
+
+const CourseHome = () => {
+  return (
+    <BrowserRouter>
+      <Router>
+        <div className="app-container">
+          <Sidebar />
+          <div className="main-content">
+            <Routes>
+              <Route exact path="/" component={Home} />
+              <Route path="/login" component={Login} />
+              <Route path="/courses" component={Courses} />
+            </Routes>
+          </div>
+        </div>
+      </Router>
+    </BrowserRouter>
+  );
+};
+
+export default CourseHome;

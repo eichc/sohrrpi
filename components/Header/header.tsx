@@ -1,21 +1,22 @@
 import styles from "./header.module.css";
+import Link from "next/link";
 
 export default function Header() {
     return (
       <div className={styles.headcontainer}>
         <div className={styles.headflex}>
-          <a href="../app/page.tsx" className={styles.head}>
+          <Link href="/Index/index" className={styles.head}>
             Home
-          </a>
-          <a href="../pages/CourseHome/courseHome.tsx" className={styles.head}>
+          </Link>
+          <Link href="../pages/CourseHome/courseHome" className={styles.head}>
             Courses
-          </a>
-          <a href="#footer" className={styles.head}>
+          </Link>
+          <Link href="" className={styles.head}>
             About Us
-          </a>
-          <a href="../pages/Login/login.tsx" className={styles.head}>
+          </Link>
+          <Link href="/LandingPage/landingPage" className={styles.head}>
             Login
-          </a>
+          </Link>
         </div>
       </div>
     );

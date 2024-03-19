@@ -3,7 +3,7 @@ import styles from "./footer.module.css";
 export default function Footer() {
     return (
         <div className={styles.footer}>
-            <a href="https://github.com/eichc/SOHR" className={styles.blackbtn} target="_blank">Github link</a> 
+            <a href="https://github.com/eichc/sohrrpi" className={styles.blackbtn} target="_blank">Github link</a> 
             <span className="footer-separator"> | </span>
             <a href="" className={styles.blackbtn} target="_blank">Project info</a>
             <span className="footer-separator"> | </span>

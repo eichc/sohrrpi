@@ -1,0 +1,17 @@
+.sidecontainer {
+    margin-top: 25px;
+    margin-left: 0px;
+    padding: 15px;
+    background-color: var(--navy-opacity);
+    width: 10%;
+    height: auto;
+    border-radius: none;
+    border-top-right-radius: .5em;
+    border-bottom-right-radius: .5em;
+}
+
+.sideflex {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}

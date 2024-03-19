@@ -12,13 +12,10 @@ const Sidebar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/login">Login</Link>
         </li>
         <li>
-          <Link to="/services">Services</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/courses">Courses</Link>
         </li>
         {/* Add more li elements for additional pages */}
       </ul>

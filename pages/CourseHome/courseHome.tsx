@@ -71,8 +71,9 @@ const CourseHome = () => {
           <div className="main-content">
             <Routes>
               <Route exact path="/" component={Home} />
-              <Route path="/login" component={Login} />
-              <Route path="/courses" component={Courses} />
+              <Route path="/login" Component={Login} />
+              <Route path="/courses" Component={Courses} />
+              <Route Component={NotFound} default={true} />
             </Routes>
           </div>
         </div>

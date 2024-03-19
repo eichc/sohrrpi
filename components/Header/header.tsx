@@ -5,7 +5,7 @@ export default function Header() {
     return (
       <div className={styles.headcontainer}>
         <div className={styles.headflex}>
-          <Link href="/Index/index" className={styles.head}>
+          <Link href="/" className={styles.head}>
             Home
           </Link>
           <Link href="../pages/CourseHome/courseHome" className={styles.head}>

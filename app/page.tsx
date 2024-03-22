@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import LandingPage from "@/pages/LandingPage/landingPage";
+import LandingPage from "./LandingPage/page";
 
 export default function Page() {
   return (

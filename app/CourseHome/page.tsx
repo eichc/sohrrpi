@@ -60,7 +60,7 @@ import { BrowserRouter as BrowserRouter, Router, Route, Routes } from "react-rou
 import Sidebar from "@/components/SideNav/sidebar";
 import Home from "./../../app/page";
 import Login from "@/components/Login/login";
-import Courses from "@/pages/CourseHome/courseHome";
+import Courses from "@/CourseHome/courseHome";
 
 const CourseHome = () => {
   return (

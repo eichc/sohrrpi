@@ -1,8 +1,8 @@
 "use client";
 import styles from "./sidebar.module.css";
-import SideBtn from "@/components/SidebarBtn/sidebarBtn";
-import List from "@/components/SidebarList/sidebarList";
-import AddCoursePopup from "@/components/AddCoursePopup/addCoursePopup";
+import SideBtn from "../SidebarBtn/sidebarBtn";
+import List from "../SidebarList/sidebarList";
+import AddCoursePopup from "../AddCoursePopup/addCoursePopup";
 import { useState } from "react";
 
 export default function Sidebar() {

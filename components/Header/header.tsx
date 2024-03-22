@@ -14,7 +14,7 @@ export default function Header() {
           <Link href="" className={styles.head}>
             About Us
           </Link>
-          <Link href="/LandingPage/landingPage" className={styles.head}>
+          <Link href="/api/auth/signin?callbackUrl=/" className={styles.head}>
             Login
           </Link>
         </div>

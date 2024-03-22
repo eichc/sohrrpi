@@ -10,7 +10,8 @@ export default function Page() {
       <div className={styles.page}>
         <Header />
       </div>
-      <LandingPage />
+      
+      <AddCourse />
 
       <div className={styles.footer}>
         <Footer />

@@ -59,8 +59,8 @@ import React from "react";
 import { BrowserRouter as BrowserRouter, Router, Route, Routes } from "react-router-dom";
 import Sidebar from "@/components/SideNav/sidebar";
 import Home from "./../../app/page";
-import Login from "@/pages/Login/login";
-import Courses from "@/pages/CourseHome/courseHome";
+import Login from "@/components/Login/login";
+import Courses from "@/CourseHome/courseHome";
 
 const CourseHome = () => {
   return (

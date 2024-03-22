@@ -4,8 +4,8 @@ import styles from './login.module.css';
 
 
 const LoginSignup = () => {
-    const [action, setAction] =  useState("Login");
-
+    const [action, setAction] =  useState("Sign Up");
+    
     
     return (
         <div className={styles.container}>

@@ -13,7 +13,7 @@ export default function Header() {
           <a href="#footer" className={styles.head}>
             About Us
           </a>
-          <a href="../pages/Login/login.tsx" className={styles.head}>
+          <a href="/api/auth/signin?callbackUrl=/" className={styles.head}>
             Login
           </a>
         </div>

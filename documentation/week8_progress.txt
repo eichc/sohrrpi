@@ -1,0 +1,10 @@
+Week 8 (3/10 - 3/16):
+- Header and Footer are finished
+- Create Course, Landing Page, Login all in progress
+- login backend in progress
+
+
+Plans for week 9:
+- finish login backend
+- finish landing page/login Frontend
+- finish create course frontend, start backend

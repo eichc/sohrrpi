@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import styles from './addcourse.module.css';
+import Header from "../components/Header/header";
 
 const AddCourseForm = () => {
     const [courseName, setCourseName] = useState("");
@@ -9,6 +10,10 @@ const AddCourseForm = () => {
     const [courseType, setCourseType] = useState("");
 
     return (
+      <>
+        <div>
+          <Header />
+        </div>
         <div className={styles.container}>
             <div className={styles.header}>
                 <div className={styles.text}>Add Course</div>
@@ -55,7 +60,8 @@ const AddCourseForm = () => {
             <div className={styles.submitcontainer}>
                 <div className={styles.submit}>Add Course</div> {/*HERE ADD AN ONCLICK EVENT USING JAVASCRIPT WHICH PERFORMS ACTION USING INFORMATION*/}
             </div>
-        </div>
+          </div>
+        </>
     );
 };
 

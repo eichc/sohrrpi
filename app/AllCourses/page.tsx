@@ -15,7 +15,7 @@ export default function AllCourses() {
       <div className={styles.courseContainer}>
         <div className={styles.title}>
           All Courses
-          </div>
+        </div>
         <div className={styles.underline}></div>
         <CourseList items={courses} />
       </div>

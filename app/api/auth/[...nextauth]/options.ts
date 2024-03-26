@@ -35,6 +35,7 @@ export const options: NextAuthOptions = {
                 // DOCS https://next-auth.js.org/configuration/providers/credentials
 
                 const user = { id: "42", name: "Emmanuel", email: "usmane@rpi.edu", password: "next-auth"}
+                const guest = {id: "42", name: "SOHR", email: "rpi", password: "abc123"}
 
                 if (credentials?.username === user.name && credentials?.email === user.email && credentials?.password === user.password) {
                     return user                  

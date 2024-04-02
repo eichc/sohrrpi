@@ -16,15 +16,17 @@ export default function AboutUs() {
           <Bio
             name="Cam Eich"
             major="Computer Science"
-            year="2026"
+            year="26"
             email="eichc@rpi.edu"
             role="Project Lead"
-            description="Description."
+            description="I am a sophomore computer science student here at RPI. I'm from Wilmington, MA (about 30 minutes north of Boston) 
+            and I attended St. John's Prep High School. I'm currently interested in pursuing a career in either data science or artificial 
+            intelligence."
           />
           <Bio
             name="Satyam Patel"
             major="Computer Science"
-            year="2026"
+            year="26"
             email="patels23@rpi.edu"
             role="Full-Stack Developer"
             description="Description."
@@ -32,7 +34,7 @@ export default function AboutUs() {
           <Bio
             name="Emmanuel Usman"
             major="Computer Science"
-            year="2026"
+            year="26"
             email="usmane@rpi.edu"
             role="Full-Stack Developer"
             description="Description."

@@ -21,6 +21,7 @@
 // }
 /* eslint-disable @typescript-eslint/no-use-before-define */
 
+"use client"
 import './page.module.css'
 import { TimeGrid } from './components/Course/TimeGrid'
 import { addDays, setHours } from 'date-fns'
@@ -35,10 +36,10 @@ const weekOffset = 0
 export default function App() {
   const [events, setEvents] = useState<CalendarEvent[]>(() => [
     {
-      id: 'first',
+      id: 'Tuesday12-2',
       start: setMinutes(setHours(new Date(), 12), 0),
-      end: setMinutes(setHours(new Date(), 16), 0),
-      title: 'test',
+      end: setMinutes(setHours(new Date(), 14), 0),
+      title: 'AMOS EATON 126',
     },
   ])
   const [selectedId, setSelected] = useState<string | null>(null)
@@ -54,7 +55,7 @@ export default function App() {
         const isWorkHour = (8 <= hour && hour < 12) || (14 <= hour && hour < 19)
         const isWorked = weekday <= 4 && isWorkHour
         return {
-          background: isWorked ? 'white' : 'lightgrey',
+          background: isWorked ? 'white' : 'white',
         }
       }}
       onClick={(event) => {

@@ -12,20 +12,19 @@ interface Props {
 export default function Bio({name, major, year, email, role, description}: Props) {
   return (
     <div className={styles.container}>
-      <div className={styles.name}>
-        {name}
-      </div>
-      <div className={styles.role}>
-        {role}
-      </div>
-      <div className={styles.info}>
-        Major: {major}
-      </div>
-      <div className={styles.info}>
-        Graduation Year: {year}
-      </div>
-      <div className={styles.info}>
-        Email: {email}
+      <div className={styles.infoContainer}>
+        <div className={styles.name}>
+          {name}
+        </div>
+        <div className={styles.info}>
+          {role}
+        </div>
+        <div className={styles.info}>
+          {major} '{year}
+        </div>
+        <div className={styles.info}>
+          {email}
+        </div>
       </div>
       <div className={styles.description}>
         {description}

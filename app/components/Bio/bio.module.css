@@ -1,0 +1,25 @@
+.container {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.infoContainer {
+    width: 49%;
+}
+
+.name {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.info {
+    margin: 5px;
+    opacity: 80%;
+}
+
+.description {
+    width: 49%;
+    text-wrap: wrap;
+    opacity: 80%;
+}

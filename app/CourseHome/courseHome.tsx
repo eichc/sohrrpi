@@ -58,9 +58,9 @@
 import React from "react";
 import { BrowserRouter as BrowserRouter, Router, Route, Routes } from "react-router-dom";
 import Sidebar from "@/components/SideNav/sidebar";
-import Home from "./../../app/page";
+import Home from "../page";
 import Login from "@/pages/Login/login";
-import Courses from "@/pages/CourseHome/courseHome";
+import Courses from "@/app/CourseHome/courseHome";
 {/*will not be used, will use props to dynamically update page */}
 const CourseHome = () => { 
   return (

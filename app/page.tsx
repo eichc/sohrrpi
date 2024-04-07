@@ -36,10 +36,16 @@ const weekOffset = 0
 export default function App() {
   const [events, setEvents] = useState<CalendarEvent[]>(() => [
     {
-      id: 'Tuesday12-2',
+      id: "Tue",
       start: setMinutes(setHours(new Date(), 12), 0),
       end: setMinutes(setHours(new Date(), 14), 0),
       title: 'AMOS EATON 126',
+    },
+    {
+      id: "Wed",
+      start: setMinutes(setHours(new Date(), 10),0),
+      end: setMinutes(setHours(new Date(), 12), 0),
+      title: 'AMOS EATON 122',
     },
   ])
   const [selectedId, setSelected] = useState<string | null>(null)

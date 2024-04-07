@@ -32,7 +32,24 @@ export function Event(props: EventProps) {
   const isCloneMode = useKeyPressed('Alt')
   const canvasSize = useCanvasSize()
 
-  const weekday = getWeekDay(event.start)
+  const today = new Date()
+  let nextD = new Date(today)
+  if (event.id=="Mon") {
+    nextD.setDate(today.getDate() + ((1 - today.getDay() + 7) % 7))
+  }
+  if (event.id=="Tue") {
+    nextD.setDate(today.getDate() + ((2 - today.getDay() + 7) % 7))
+  }
+  if (event.id=="Wed") {
+    nextD.setDate(today.getDate() + ((3 - today.getDay() + 7) % 7))
+  }
+  if (event.id=="Thu") {
+    nextD.setDate(today.getDate() + ((4 - today.getDay() + 7) % 7))
+  }
+  if (event.id=="Fri") {
+    nextD.setDate(today.getDate() + ((5 - today.getDay() + 7) % 7))
+  }
+  const weekday = getWeekDay(nextD)
   const startMinutes = event.start.getHours() * 60 + event.start.getMinutes()
   const endMinutes = event.end.getHours() * 60 + event.end.getMinutes()
   const duration = endMinutes - startMinutes

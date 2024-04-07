@@ -130,7 +130,7 @@ function Day(props: DayProps) {
                       ? {
                           background: "rgba(255, 0, 0, 1)",
                           zIndex: 15,
-                          borderRadius: "1rem"
+                          borderRadius: "0rem"
                         }
                       : {})
                   }}
@@ -158,7 +158,7 @@ function DaysAxis(props: DaysAxisProps) {
         display: "grid",
         gridTemplateColumns: `${HOURS_AXIS_WIDTH} repeat(7, 1fr)`,
         boxShadow: "0 8px 16px rgba(0, 0, 0, 0.1)",
-        background: "white",
+        background: "black",
         zIndex: 30,
         gridColumn: "span 2"
       }}
@@ -199,7 +199,7 @@ function TimeAxis() {
           <label
             style={{
               lineHeight: "1rem",
-              top: "-.5rem",
+              top: "0rem",
               position: "absolute",
               right: ".25rem"
             }}

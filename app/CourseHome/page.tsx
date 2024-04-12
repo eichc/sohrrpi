@@ -1,5 +1,4 @@
 "use client"
-import './courseHome.module.css'
 import { TimeGrid } from '../components/Course/TimeGrid'
 import { addDays, setHours } from 'date-fns'
 import { setMinutes } from 'date-fns'

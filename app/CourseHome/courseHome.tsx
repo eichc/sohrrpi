@@ -1,85 +1,108 @@
-//currently making the side bar where classes will display. 
-//"Home" will be an empty page with offer to redirect to add courses page
-//when a course is picked, redirect to that course's page (likely be a singular page that will populate based on the picked course via database)
+// import styles from "./page.module.css";
+// import LandingPage from "./LandingPage/page";
+// import Calender from "./components/Course/course"
+// import {addDays, subDays } from "date-fns";
+// export default function Page() {
+//   return (
+//     <div>
+//       <LandingPage />
+//       <Calender 
+//       events={[
+//         {courseID: "CSCI 1100",
+//          courseName: "Computer Science",
+//          professor: "Turner",
+//          date: addDays(new Date(), 6),
+//          times: ["10:00"],
+//          room: ["ALAC"],
+//          ta: ["Turner"]}
+//       ]} />
+//     </div>
+//   );
+// }
+/* eslint-disable @typescript-eslint/no-use-before-define */
 
-// "use client";
-// import Navbar from "@/components/SideNav/sidenav";
-// import React from "react";
-// import Home from "../../app/page";
-// import Login from "@/pages/Login/login";
+"use client"
+import './courseHome.module.css'
+import { TimeGrid } from '../components/Course/TimeGrid'
+import { addDays, setHours } from 'date-fns'
+import { setMinutes } from 'date-fns'
+import { useState } from 'react'
+import { Event, CalendarEvent } from '../components/Course/course'
+import * as uuid from 'uuid'
+import { getWeekDay } from '../components/Course/getWeekDay'
 
+const weekOffset = 0
 
-// import { createRoot } from "react-dom/client";
-// import {
-//   createBrowserRouter,
-//   RouterProvider,
-//   Route,
-//   Link,
-//   Outlet,
-//   createRoutesFromElements,
-// } from "react-router-dom";
+export default function App() {
+  const [events, setEvents] = useState<CalendarEvent[]>(() => [
+    {
+      id: "Tue",
+      start: setMinutes(setHours(new Date(), 12), 0),
+      end: setMinutes(setHours(new Date(), 18), 0),
+      title: 'AMOS EATON 126',
+    },
+    {
+      id: "Wed",
+      start: setMinutes(setHours(new Date(), 10),0),
+      end: setMinutes(setHours(new Date(), 12), 0),
+      title: 'AMOS EATON 122',
+    },
+  ])
+  const [selectedId, setSelected] = useState<string | null>(null)
 
-// const AppLayout = () => (
-//   <>
-//     <Navbar />
-//     <Outlet />
-//   </>
-// );
+  const today = addDays(new Date(), weekOffset * 7)
+  const firstDayOfWeek = addDays(today, -1 * getWeekDay(today))
 
-// // const router = createBrowserRouter(
-// //   createRoutesFromElements(
-// //     <Route element={<AppLayout />}>
-// //       <Route path="/courseHome" element={<CourseHome />} />
-// //       <Route path="/products" element={<Login />} />
-// //     </Route>
-// //   )
-// // );
-
-// const router = createBrowserRouter([
-//   {
-//     element: <AppLayout />,
-//     children: [
-//       {
-//         path: "/",
-//         element: <Home />,
-//       },
-//       {
-//         path: "/login",
-//         element: <Login />,
-//       },
-//     ],
-//   },
-// ]);
-
-// createRoot(document.getElementById("root")!).render(
-//   <RouterProvider router={router} />
-// );
-
-import React from "react";
-import { BrowserRouter as BrowserRouter, Router, Route, Routes } from "react-router-dom";
-import Sidebar from "@/components/SideNav/sidebar";
-import Home from "../page";
-import Login from "@/pages/Login/login";
-import Courses from "@/app/CourseHome/courseHome";
-{/*will not be used, will use props to dynamically update page */}
-const CourseHome = () => { 
   return (
-    <BrowserRouter>
-      <Router>
-        <div className="app-container">
-          <Sidebar />
-          <div className="main-content">
-            <Routes>
-              <Route exact path="/" component={Home} />
-              <Route path="/login" Component={Login} />
-              <Route path="/courses" Component={Courses} />
-              <Route Component={NotFound} default={true} />
-            </Routes>
-          </div>
-        </div>
-      </Router>
-    </BrowserRouter>
-  );
-};
+    <TimeGrid
+      getQuarterStyle={(quarterTime) => {
+        const { weekday, hour } = quarterTime
 
-export default CourseHome;
+        const isWorkHour = (8 <= hour && hour < 12) || (14 <= hour && hour < 19)
+        const isWorked = weekday <= 4 && isWorkHour
+        return {
+          background: isWorked ? 'white' : 'white',
+        }
+      }}
+      onClick={(event) => {
+        let element: HTMLElement | null = event.target as HTMLElement
+        while (element) {
+          if (element.matches('[data-draggable]')) {
+            return
+          }
+          element = element.parentElement
+        }
+
+        setSelected(null)
+      }}
+    >
+      {events.map((event) => {
+        return (
+          <Event
+            key={event.id}
+            event={event}
+            onChange={(newEvent) => {
+              setEvents((events) => {
+                return events.map((event) => {
+                  if (event.id !== newEvent.id) return event
+                  return newEvent
+                })
+              })
+            }}
+            onClone={(newEvent) => {
+              const newId = uuid.v4()
+              setEvents((events) => {
+                return [...events, { ...newEvent, id: newId }]
+              })
+              setSelected(newId)
+            }}
+            onSelect={() => {
+              setSelected(event.id)
+            }}
+            isSelected={event.id === selectedId}
+          />
+        )
+      })}
+    </TimeGrid>
+  )
+}

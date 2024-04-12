@@ -1,28 +1,5 @@
-// import styles from "./page.module.css";
-// import LandingPage from "./LandingPage/page";
-// import Calender from "./components/Course/course"
-// import {addDays, subDays } from "date-fns";
-// export default function Page() {
-//   return (
-//     <div>
-//       <LandingPage />
-//       <Calender 
-//       events={[
-//         {courseID: "CSCI 1100",
-//          courseName: "Computer Science",
-//          professor: "Turner",
-//          date: addDays(new Date(), 6),
-//          times: ["10:00"],
-//          room: ["ALAC"],
-//          ta: ["Turner"]}
-//       ]} />
-//     </div>
-//   );
-// }
-/* eslint-disable @typescript-eslint/no-use-before-define */
-
 "use client"
-import './page.module.css'
+import './courseHome.module.css'
 import { TimeGrid } from '../components/Course/TimeGrid'
 import { addDays, setHours } from 'date-fns'
 import { setMinutes } from 'date-fns'

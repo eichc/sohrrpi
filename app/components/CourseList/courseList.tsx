@@ -12,7 +12,9 @@ export default function CourseList({items}: Props) {
           className={styles.listitem} 
           key={item}
         >
-          {item}
+          <button className={styles.itembtn}>
+            {item}
+          </button>
         </li>
       ))}
     </ul>

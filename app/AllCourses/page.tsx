@@ -5,7 +5,7 @@ import CourseList from "../components/CourseList/courseList";
 
 
 export default function AllCourses() {
-  let courses = ["CSCI 1100", "MATH 1010", "CSCI 1200", "MATH 2010", "BIOL 1010", "ECON 2010"];
+  let courses = ["CSCI 2600", "CSCI 1100", "MATH 1010", "CSCI 1200", "MATH 2010", "BIOL 1010", "ECON 2010"];
 
   return (
     <>

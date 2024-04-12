@@ -1,4 +1,5 @@
 import styles from "./courselist.module.css";
+import Link from "next/link";
 
 interface Props {
   items: string[];
@@ -12,9 +13,9 @@ export default function CourseList({items}: Props) {
           className={styles.listitem} 
           key={item}
         >
-          <button className={styles.itembtn} >
+          <Link href="../CourseHome" className={styles.itembtn}>
             {item}
-          </button>
+          </Link>
         </li>
       ))}
     </ul>

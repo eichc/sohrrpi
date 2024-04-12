@@ -20,13 +20,16 @@
     font-size: 1.5em;
     text-align: center;
     width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .itembtn {
+    color: black;
     border: none;
     margin: none;
     padding: 10px;
-    background-color: white;
+    background-color: none;
     font-weight: 600;
     font-size: 1em;
     opacity: 80%;

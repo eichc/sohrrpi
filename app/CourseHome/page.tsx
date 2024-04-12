@@ -22,7 +22,7 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
 
 "use client"
-import './page.module.css'
+import './courseHome.module.css'
 import { TimeGrid } from '../components/Course/TimeGrid'
 import { addDays, setHours } from 'date-fns'
 import { setMinutes } from 'date-fns'
@@ -30,6 +30,8 @@ import { useState } from 'react'
 import { Event, CalendarEvent } from '../components/Course/course'
 import * as uuid from 'uuid'
 import { getWeekDay } from '../components/Course/getWeekDay'
+import Header from "../components/Header/header";
+import Footer from "../components/Footer/footer";
 
 const weekOffset = 0
 
@@ -139,6 +141,10 @@ export default function App() {
   const firstDayOfWeek = addDays(today, -1 * getWeekDay(today))
 
   return (
+    <>
+    <div>
+      <Header />
+    </div>
     <TimeGrid
       getQuarterStyle={(quarterTime) => {
         const { weekday, hour } = quarterTime
@@ -189,5 +195,6 @@ export default function App() {
         )
       })}
     </TimeGrid>
+    </>
   )
 }

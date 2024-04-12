@@ -36,17 +36,102 @@ const weekOffset = 0
 export default function App() {
   const [events, setEvents] = useState<CalendarEvent[]>(() => [
     {
-      id: "Tue",
+      id: "Mon",
       start: setMinutes(setHours(new Date(), 12), 0),
       end: setMinutes(setHours(new Date(), 14), 0),
-      title: 'AMOS EATON 126',
+      title: 'Yuxiao; AE 118',
+    },
+    {
+      id: "Mon",
+      start: setMinutes(setHours(new Date(), 14),0),
+      end: setMinutes(setHours(new Date(), 16), 0),
+      title: 'Yuxio; AE 118',
+    },
+    {
+      id: "Mon",
+      start: setMinutes(setHours(new Date(), 16), 0),
+      end: setMinutes(setHours(new Date(), 18), 0),
+      title: 'Himangi & Siggy; AE 118',
+    },
+    {
+      id: "Tue",
+      start: setMinutes(setHours(new Date(), 10), 0),
+      end: setMinutes(setHours(new Date(), 12), 0),
+      title: 'Zekkerriyya; AE 118',
+    },
+    {
+      id: "Tue",
+      start: setMinutes(setHours(new Date(), 14), 0),
+      end: setMinutes(setHours(new Date(), 16), 0),
+      title: 'Pierson & Zetong; Sage 4101',
+    },
+    {
+      id: "Tue",
+      start: setMinutes(setHours(new Date(), 16), 0),
+      end: setMinutes(setHours(new Date(), 18), 0),
+      title: 'Sam; Sage 4101',
+    },
+    {
+      id: "Tue",
+      start: setMinutes(setHours(new Date(), 18), 0),
+      end: setMinutes(setHours(new Date(), 20), 0),
+      title: 'Tushar & Chris; Sage 4101',
     },
     {
       id: "Wed",
-      start: setMinutes(setHours(new Date(), 10),0),
-      end: setMinutes(setHours(new Date(), 12), 0),
-      title: 'AMOS EATON 122',
+      start: setMinutes(setHours(new Date(), 12), 0),
+      end: setMinutes(setHours(new Date(), 14), 0),
+      title: 'Hongliang; Walker 5113',
     },
+    {
+      id: "Wed",
+      start: setMinutes(setHours(new Date(), 14), 0),
+      end: setMinutes(setHours(new Date(), 16), 0),
+      title: 'Hongliang & Vasundhara; Walker 5113',
+    },
+    {
+      id: "Wed",
+      start: setMinutes(setHours(new Date(), 16), 0),
+      end: setMinutes(setHours(new Date(), 18), 0),
+      title: 'Vasundhara; AE 118',
+    },
+    {
+      id: "Thu",
+      start: setMinutes(setHours(new Date(), 14), 0),
+      end: setMinutes(setHours(new Date(), 16), 0),
+      title: 'Kewen & Aidan; Lally 104',
+    },
+    {
+      id: "Thu",
+      start: setMinutes(setHours(new Date(), 16), 0),
+      end: setMinutes(setHours(new Date(), 18), 0),
+      title: 'Yufei & Himangi; Lally 104',
+    },
+    {
+      id: "Thu",
+      start: setMinutes(setHours(new Date(), 18), 0),
+      end: setMinutes(setHours(new Date(), 20), 0),
+      title: 'Yufei; Lally 104',
+    },
+    {
+      id: "Fri",
+      start: setMinutes(setHours(new Date(), 10), 0),
+      end: setMinutes(setHours(new Date(), 12), 0),
+      title: 'Zekkerriyya; AE 118',
+    },
+    {
+      id: "Fri",
+      start: setMinutes(setHours(new Date(), 16), 0),
+      end: setMinutes(setHours(new Date(), 18), 0),
+      title: 'Gursimran; AE 118',
+    },
+    {
+      id: "Fri",
+      start: setMinutes(setHours(new Date(), 18), 0),
+      end: setMinutes(setHours(new Date(), 20), 0),
+      title: 'Gursimran & Siggy; AE 118',
+    },
+    
   ])
   const [selectedId, setSelected] = useState<string | null>(null)
 

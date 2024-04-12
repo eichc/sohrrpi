@@ -29,7 +29,8 @@ export default function AboutUs() {
             year="26"
             email="patels23@rpi.edu"
             role="Full-Stack Developer"
-            description="Description."
+            description="I am a sophomore Computer Science / Information Technology and Web Science dual major student at RPI. I'm from Utica, NY and I attended Shaker High School.
+            I'm pursuing a career in Artifical Intelligence."
           />
           <Bio
             name="Emmanuel Usman"

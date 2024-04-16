@@ -10,10 +10,10 @@
     padding-top: 2em;
     margin-bottom: 50px;
     margin-top: 50px;
+    color: white;
 }
 
 .title {
-    color: white;
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 10px;
@@ -24,4 +24,10 @@
     height: 6px;
     background: #00b0D5DD;
     border-radius: 9px;
+}
+
+.description {
+    margin: 20px;
+    font-size: 1.2em;
+    opacity: 90%;
 }

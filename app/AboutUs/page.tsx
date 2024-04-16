@@ -34,11 +34,11 @@ export default function AboutUs() {
           />
           <Bio
             name="Emmanuel Usman"
-            major="Computer Science"
+            major="Computer Science and ITWS"
             year="26"
             email="usmane@rpi.edu"
             role="Full-Stack Developer"
-            description="Description."
+            description="I am currently a sophmore Computer Science / Information Technology and Web Science dual major student at RPI. I'm from Queens, NY. My hobbies are playing tennis, boxing, and coding. I am an identical twin."
           />
         </div>
       </div>
